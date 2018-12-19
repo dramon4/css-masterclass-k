@@ -1,0 +1,123 @@
+:root {
+  --Padding: 25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fafafc;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 0;
+}
+
+.header {
+  margin-top: 80px;
+  padding-left: var(--Padding);
+  margin-bottom: 40px;
+}
+
+.navigation {
+  padding: 0px var(--Padding);
+  margin-bottom: 50px;
+}
+.navigation .navigation__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-gap: 40px;
+}
+
+.navigation__list .navigation__item {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  grid-gap: 10px;
+  text-align: center;
+  transition: opacity 0.1s linear;
+}
+
+.navigation__item .item__icon {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  transition: box-shaow 0.2s linear;
+  cursor: pointer;
+}
+.navigation__list:hover .navigation__item {
+  opacity: 0.5;
+}
+.navigation__list .navigation__item:hover {
+  opacity: 1;
+}
+
+.navigation__list .navigation__item:hover .item__icon {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item__icon .icon__emoji {
+  font-size: 20px;
+}
+
+.navigation__item .item__text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.featured {
+  padding: var(--Padding);
+  padding-top: 25px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.featured .featured__title {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.featured .featured__wrapper {
+  overflow: scroll;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(200px, 1fr);
+  grid-gap: 30px;
+  padding-bottom: 20px;
+}
+
+.featured-meal {
+  height: 150px;
+  background-color: red;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.featured-meal:first-child {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(https://i.pinimg.com/564x/93/98/4d/93984d6b099a6df99055ac4769b3c151.jpg);
+  background-size: cover;
+  background-position: center center;
+}
