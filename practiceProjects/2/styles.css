@@ -1,5 +1,6 @@
 :root {
   --Padding: 25px;
+  --borderTop: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -31,6 +32,7 @@ h1 {
   margin-bottom: 40px;
 }
 
+/* navigation */
 .navigation {
   padding: 0px var(--Padding);
   margin-bottom: 50px;
@@ -42,6 +44,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(4, 50px);
   grid-gap: 40px;
+  justify-content: space-around;
 }
 
 .navigation__list .navigation__item {
@@ -84,10 +87,11 @@ h1 {
   font-weight: 600;
 }
 
+/* featured */
 .featured {
   padding: var(--Padding);
   padding-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: var(--borderTop);
 }
 
 .featured .featured__title {
@@ -107,17 +111,69 @@ h1 {
 
 .featured-meal {
   height: 150px;
-  background-color: red;
   border-radius: 10px;
   display: flex;
   align-items: flex-end;
   padding: 20px;
   color: white;
+  justify-content: space-between;
+  background-size: cover;
+  background-position: center center;
+}
+.featured-meal__title {
+  margin-right: 10px;
+}
+.featured-meal__button {
+  background-color: white;
+  font-size: 17px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured-meal:first-child {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
     url(https://i.pinimg.com/564x/93/98/4d/93984d6b099a6df99055ac4769b3c151.jpg);
-  background-size: cover;
-  background-position: center center;
+}
+
+.featured-meal:nth-child(2) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(https://i.pinimg.com/564x/47/83/89/478389258906d042de132a9cb0e75ff4.jpg);
+}
+.featured-meal:nth-child(3) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(https://i.pinimg.com/564x/04/c7/10/04c71000abd5a1f78ef66a51d80c3d51.jpg);
+}
+.featured-meal:nth-child(4) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
+    url(https://i.pinimg.com/564x/18/0b/77/180b77ef39561f412f07271cdc1db28d.jpg);
+}
+
+/* recipe */
+.recipes {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: var(--borderTop);
+}
+.recipes__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipes__list .recipe:nth-child(odd) {
+  background-color: white;
+  width: 100%;
+}
+.recipes__list .recipe {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 15px var(--Padding);
+}
+.recipe_btn {
+  background-color: transparent;
+  width: 30px;
+  border-radius: 30%;
 }
