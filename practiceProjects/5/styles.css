@@ -1,0 +1,155 @@
+/* Initial setting */
+:root {
+  --gradientBackground: linear-gradient(to right, #a37afc, #7bb1f9);
+  --boxShadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  --greyColor: rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body,
+html,
+main {
+  height: 100%;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #d5d5d3;
+}
+
+/* header */
+.header {
+  background-image: var(--gradientBackground);
+  box-shadow: var(--boxShadow);
+  padding: 40px 10px 10px 10px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.header svg {
+  fill: white;
+}
+.header .header__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+}
+.header__title span:first-child {
+  display: block;
+}
+.header__title span:last-child {
+  margin-left: 20px;
+}
+.header__icons span {
+  margin-left: 15px;
+}
+.header__icons span:first-child {
+  margin: 0;
+}
+/* main */
+.main .match-list__button {
+  position: fixed;
+  background-image: var(--gradientBackground);
+  color: white;
+  box-shadow: var(--boxShadow);
+  padding: 30px 40px;
+  border: none;
+  text-transform: uppercase;
+  bottom: 40px;
+  right: 15px;
+}
+/* main__header */
+.main {
+  padding: 0 20px;
+  z-index: 1;
+  position: relative;
+}
+.main .main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--greyColor);
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+}
+.main__header .main__header-title {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.main__header .main__header-subtitle {
+  text-transform: uppercase;
+  margin-left: 20px;
+  color: var(--greyColor);
+}
+.main__header svg,
+.match-item svg {
+  fill: var(--greyColor);
+}
+
+/* main__match-list */
+.main .match-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-gap: 30px;
+}
+.match-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 20px;
+  vertical-align: baseline;
+}
+.match-item__img {
+  width: 100px;
+  box-shadow: var(--boxShadow);
+}
+.match-item__info {
+  font-weight: 600;
+}
+.match-item__info .match-item__name {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.match-item__info .match-item__friends {
+  text-transform: uppercase;
+  color: var(--greyColor);
+}
+.match-item .match-item__icon {
+  align-self: center;
+}
+.match-item:nth-child(odd) svg {
+  fill: #ad6dff;
+}
+/* fake backpage */
+.fakebg {
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  width: 80vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 0;
+}
