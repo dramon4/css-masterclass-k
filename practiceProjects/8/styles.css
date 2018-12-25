@@ -1,0 +1,97 @@
+:root {
+  --greyColor: rgba(0, 0, 0, 0.7);
+  --blackColor: #363d3f;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  max-height: 100%;
+  height: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+
+/* header */
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.header .header__squre {
+  background-color: var(--blackColor);
+  padding: 15px;
+  margin-right: 15px;
+}
+
+/* main */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: calc(100% - 50px);
+  grid-template-rows: 100%;
+  place-items: center;
+}
+.main .main__info {
+  margin-left: 200px;
+  width: 100%;
+}
+.main .main__titles {
+  margin-bottom: 90px;
+}
+.main__titles .main__pre-title {
+  text-transform: uppercase;
+  color: var(--greyColor);
+}
+.main__titles .main__title {
+  padding: 10px;
+  position: relative;
+  font-size: 120px;
+  left: 100px;
+}
+.main__titles .main__subtitle {
+  padding-right: 120px;
+  color: var(--greyColor);
+}
+.main__info .main__link {
+  text-decoration: none;
+  color: var(--greyColor);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+/* main__photo */
+.main .main__photo {
+  background-image: url(https://picsum.photos/1000/1000/?random);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: flex-end;
+}
+.main__photo .main__navigation {
+  background-color: white;
+  padding: 10px 20px;
+  font-weight: 600;
+}
+.main__navigation .navigation__arrow:first-child {
+  margin-right: 10px;
+}
+.main__navigation .navigation__arrow:last-child {
+  margin-left: 10px;
+}
