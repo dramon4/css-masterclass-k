@@ -1,0 +1,110 @@
+:root{
+
+}
+*{
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,body,html{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8ffff;
+}
+/* header */
+.header{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 40px;
+}
+.header .header__menu{
+    transform: rotate(90deg);
+    font-size: 20px;
+    font-weight: 600;
+}
+.header .header__title{
+    font-weight: 400;
+}
+/* main */
+/* main__gallery */
+.gallery{
+    background-color: #eeeff5;
+    padding: 40px;
+}
+.galley__items,
+.content {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.gallery__items{
+    display: grid;
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.gallery .gallery__item {
+    height: 25vh;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.gallery__items .gallery__item:first-child{
+    background-image: url(https://i.pinimg.com/564x/28/42/26/284226b9e635bf07cda6d6f46a0ae991.jpg);
+}
+.gallery__items .gallery__item:nth-child(2){
+    background-image: url(https://i.pinimg.com/564x/0f/2f/53/0f2f536d106af470ce1751ac5328de18.jpg);
+}
+.gallery__items .gallery__item:nth-child(3){
+    background-image: url(https://i.pinimg.com/564x/98/a4/bf/98a4bfe4dfb77247de43e6ae8915571e.jpg);
+}
+
+/* main__content */
+.content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+    margin-top: 40px;
+    padding: 0 40px;
+}
+.content .content__title{
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.8);
+}
+.content .content__description{
+    font-size: 14px;
+    color: rgba(0,0,0,0.3);
+}
+.content .content__column{
+    display:grid;
+    grid-gap: 20px;
+}
+.content .content__list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 30px 0px;
+}
+.content__list .list__name{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+.content__list .list__value{
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.3)
+}
+.content .content__link{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #3497db;
+}
