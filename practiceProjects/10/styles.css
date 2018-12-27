@@ -1,0 +1,113 @@
+:root {
+  --boderStyle: 8px solid var(--titleColor);
+  --titleColor: #fe0d1b;
+  --borderStyleBlack: 8px solid #000000;
+  --dashedGreyColor: #888888;
+  --whiteColor: #ffffff;
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #fafafc;
+  padding: 100px 50px;
+}
+/* main__grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(50px, 1fr));
+  grid-template-rows: repeat(3, 200px);
+  grid-auto-columns: minmax(200px, 1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  grid-auto-flow: column;
+  /* grid-auto-flow: row dense; */
+}
+/* gird__header */
+.grid .header {
+  grid-area: span 3 / span 2;
+  border-top: var(--boderStyle);
+  align-items: center;
+  display: grid;
+}
+.header .header__backbg {
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 5px,
+    black 5px,
+    black 8px
+  );
+}
+.header .header__title {
+  font-size: 120px;
+  transform: rotate(-90deg);
+  color: var(--titleColor);
+  position: relative;
+  right: 80px;
+  top: -40px;
+}
+.grid .item {
+  border-top: var(--borderStyleBlack);
+  display: grid;
+}
+.grid .item:nth-child(3),
+.grid .item:nth-child(5) {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+.grid .item:nth-child(4) {
+  grid-row: span 3;
+  grid-column: span 2;
+}
+.grid .item:nth-child(9) {
+  grid-row: span 1;
+  grid-column: span 2;
+}
+.item .item__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item__wrap .item__wrap-title {
+  display: flex;
+  flex-direction: column;
+}
+.item__wrap .title-title {
+  font-size: 24px;
+}
+.item__wrap .item__wrap-title:nth-child(3) {
+  font-size: 30px;
+}
+.item__wrap-title .title-num {
+  font-size: 50px;
+}
+.item__wrap-info .info-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+.item__wrap-info .info-subtitle {
+  font-size: 12px;
+}
+.item .item__image {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://i.pinimg.com/originals/d1/d7/d4/d1d7d40759596ffd8a77688f6c2f845f.jpg);
+  background-position: center;
+  background-size: cover;
+}
