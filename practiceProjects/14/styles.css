@@ -1,0 +1,48 @@
+:root {
+  --greyColor: rgba(0, 0, 0, 0.5);
+}
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Top__header */
+.header {
+}
+/* main */
+.main {
+  display: grid;
+}
+/* main__header */
+.main .header {
+}
+/* main__content */
+.main .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 6, 1fr;
+}
+/* main__content__header */
+.content .content__header {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+.content .content__image {
+  width: 200px;
+}
+/* main__footer */
